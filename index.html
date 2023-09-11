@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Calculadora de Hidratacion</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <div id = "contenedor">
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <script src="script.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dosis:wght@200&family=Nova+Round&family=Righteous&display=swap" rel="stylesheet">
+        
 
-        <div id = "calculadora">
-            <div class = "contenido">
-                <h1>Hidratación Basal</h1>
-                <p>Completa todos los datos</p>
-                <input type="number" placeholder="Peso en kg...">
-                <p>Debe completar todos los datos</p>
-                <button>Calcular</button>
-                <p>70 cc/hr</p>
-                <p>m+m/2 ; 105 cc/hr</p>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="calculadora">
+                <div class="contenido">
+                    <h1 id="titulo1">Hidratación Basal</h1>
+                    <!-- <p id="instruccion">Completa todos los datos</p> -->
+                    <input id ='peso' type="number" placeholder="Peso en kg...">
+                    <p id = 'error'> Debe completar todos los datos correctamente</p>
+                    <button id="calcular">Calcular</button>
+                    <p id="resultados">RESULTADOS</p>
+                    <div id="resultado1">
+                        <p id="metodo1"></p>
+                        <p id='flu'></p>
+                        <p id='man'></p>
+                    </div>
+                    <div id="resultado2">
+                        <p id="metodo2"></p>
+                        <p id='sc1'></p>
+                        <p id='sc2'></p>
+                    </div>
+                </div>
+            </div>
+            <div id="detalle">
+                <div class="contenido">
+                    <h1>Procedimiento</h1>
+                    <ol class="listas">
+                        <li class="lista">Ingrese el peso del paciente en kg en el recuadro de la izquierda</li>
+                        <li class="lista">Haga clic sobre el botón de calcular</li>
+                    </ol>
+                    
+                    <h1>Métodos de cálculo de hidratación basal</h1>
+                    <ol class="listas">
+                        <li class="lista">Si el peso del paciente es de 30kg o menor, el método utilizado será el de Holliday-Segar</li>
+                        <li class="lista">Si el peso del paciente excede los 30kg el método utilizado será el de Superficie Corporal</li>
+                    </ol>
+                </div>
             </div>
         </div>
-
-        <div id = "detalle">
-            <div class = "contenido">
-                <h1>¿Cómo se calcula?</h1>
-                <ul>
-                    <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
-                    <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg</li>
-                    <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>
